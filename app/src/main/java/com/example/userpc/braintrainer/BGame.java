@@ -61,8 +61,13 @@ public class BGame extends AppCompatActivity {
                     rand = new Random();
                     int num1 = rand.nextInt(100) + 1;
                     int num2 = rand.nextInt(100)+ 1;
-                    int opChoice = rand.nextInt(1);
-                    correctButton = rand.nextInt(3);
+                    if(num1 < num2){
+                        int temp = num1;
+                        num1 = num2;
+                        num2 = temp;
+                    }
+                    int opChoice = rand.nextInt(2);
+                    correctButton = rand.nextInt(4);
 
                     String[] op = {"+","-"};
 
